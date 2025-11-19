@@ -48,3 +48,8 @@ Client-side routing: form submits user input via URL params → /search?....
 Suspense for search page: useSearchParams() wrapped in <Suspense> to work with Next.js 16.
 
 TailwindCSS utilities: fast, consistent styling with minimal custom CSS.
+
+🌐 Vercel Demo
+
+https://tripzy-frontend-test-trang-quach-thao.vercel.app/
+
