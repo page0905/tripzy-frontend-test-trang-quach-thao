@@ -51,5 +51,5 @@ TailwindCSS utilities: fast, consistent styling with minimal custom CSS.
 
 🌐 Vercel Demo
 
-https://tripzy-frontend-test-trang-quach-thao.vercel.app/
+https://tripzy-frontend-test-trang-quach-th.vercel.app/
 
