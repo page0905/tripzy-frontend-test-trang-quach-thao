@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🚀 Tripzy Frontend Test
 
-## Getting Started
+A simple travel search UI built with Next.js, React, TypeScript, and TailwindCSS.
+Users can search routes, pick dates with a custom calendar, and view results based on URL parameters.
 
-First, run the development server:
+📦 Getting Started
 
-```bash
+Install
+npm install
+
+Run in development
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build
+npm run build
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Start production
+npm start
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🧱 Tech Stack
 
-## Learn More
+Next.js 16 (App Router)
 
-To learn more about Next.js, take a look at the following resources:
+React 19
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+TypeScript
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+TailwindCSS v4
 
-## Deploy on Vercel
+Fully custom UI components (no UI libraries)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+📁 Project Structure
+src/
+├── app/ # pages & layout
+├── components/ # form + UI components
+├── data/ # static locations
+└── public/icons # SVG icons
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🧩 Architecture & Key Decisions
+
+Component-based form: inputs split into small reusable components
+(From/To, Date, Return Date, Passenger, Tabs).
+
+Custom calendar: a dual-month date picker built directly from the Figma design without using any date libraries.
+
+Client-side routing: form submits user input via URL params → /search?....
+
+Suspense for search page: useSearchParams() wrapped in <Suspense> to work with Next.js 16.
+
+TailwindCSS utilities: fast, consistent styling with minimal custom CSS.
